@@ -1,0 +1,33 @@
+POST http://localhost:8080/api/v1/login
+Content-Type: application/json
+
+{
+    "email": "phamthaisang1710@gmail.com",
+    "password": "123456"
+}
+### get
+
+POST http://localhost:8080/api/v1/users/request-otp
+Content-Type: application/json
+
+{
+  "firstName": "Sang",
+  "lastName": "Pham",
+  "email": "phamthaisang1710@gmail.com",
+  "password": "123456",
+  "phone": "0123456789",
+  "dateOfBirth": "2000-01-01"
+}
+
+###
+
+POST http://localhost:8080/api/v1/users/verify-otp
+Content-Type: application/json
+
+{
+  "email": "phamthaisang1710@gmail.com",
+  "otp": "176543" 
+}
+###
+GET http://localhost:8080/api/v1/get-profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODZiZTkyYjJhZjA4YTM0MzRjNDI4YjciLCJlbWFpbCI6InBoYW10aGFpc2FuZzE3MTBAZ21haWwuY29tIiwiaWF0IjoxNzUxOTUxMTc3LCJleHAiOjE3NTIwMzc1Nzd9.6L5hl1I8f8JjX3LJLucrsaB596YiFUT1e8vEKptxRfc
