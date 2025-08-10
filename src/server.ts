@@ -50,18 +50,7 @@ const mongooseDbOptions = {
   socketTimeoutMS: 45000,
   family: 4,
 };
-
+server.listen(PORT, () => {
+  console.log(`✅ Server is running at http://localhost:${PORT}`);
+});
 // ✅ Kết nối DB và chạy server
-mongoose
-  .connect(env.MONGODB_URI, mongooseDbOptions)
-  .then(() => {
-    console.log("✅ Connected to MongoDB");
-
-    // 👉 CHỈ DÙNG server.listen(), KHÔNG DÙNG app.listen()
-    server.listen(PORT, () => {
-      console.log(`✅ Server is running at http://localhost:${PORT}`);
-    });
-  })
-  .catch((err) => {
-    console.error("❌ Failed to connect to MongoDB", err);
-  });
