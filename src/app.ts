@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 import path from "path";
-import auth from "../src/routes/auth.route";
-import user from "../src/routes/users.route";
+import auth from "./routes/auth.route";
+import user from "./routes/users.route";
 
 const app = express();
 
